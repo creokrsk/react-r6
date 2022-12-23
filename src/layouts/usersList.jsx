@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink, useRouteMatch } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const usersArr = [];
 
@@ -8,14 +8,12 @@ for (let i = 0; i < 5; i++) {
 }
 
 const UsersList = () => {
-  const { path } = useRouteMatch();
-  console.log('path: ', path);
   return (
     <div>
       <ul>
         {usersArr.map((el, i) => (
           <li key={i}>
-            <NavLink to={`${path}/${i}`}>{`user ${el}`}</NavLink>
+            <NavLink to={`${i}/profile`}>{`user ${el}`}</NavLink>
           </li>
         ))}
       </ul>

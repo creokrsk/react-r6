@@ -6,7 +6,6 @@ const EditUser = () => {
   return (
     <div>
       <h1>Edit Profile</h1>
-
       <NavLink to={'/users/' + userId}>Go to user profile</NavLink>
       <br />
       <NavLink to={'/users/' + (+userId + 1)}> Go to next user</NavLink>
